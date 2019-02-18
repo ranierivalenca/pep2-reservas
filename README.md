@@ -12,7 +12,4 @@ Alguns equipamentos só podem ser reservados em algumas salas (por exemplo, *pro
 
 Uma mesma sala não pode ser reservada por dois usuários no mesmo horário. Assim como um mesmo equipamento não pode ser reservado em duas salas no mesmo horário.
 
-
-
 Um usuário deve poder ver suas reservas, editá-las ou removê-las. Ao fazer uma reserva, o usuário deve escolher o dia / hora (no mínimo 24h após a data que ele está efetuando a reserva) e só então visualizar as salas disponíveis e, após a escolha da sala, os equipamentos disponíveis. O administrador deve ver todas as reservas futuras ordenadas das mais próximas para as mais distantes; as reservas passadas devem poder ser consultadas numa área separada.
-
