@@ -1,40 +1,43 @@
 <?php
-include "";
+include "configs/init.php";
+
+
 
 $nome 	     = $_POST['nome'];
 $username    = $_POST['username'];
 $email 	     = $_POST['email'];
 $senha	     = $_POST['senha'];
-$conf_senha  = $_POST['confirmarsenha']
-
-
-
 
 function cadastro_de_user($nome,$username,$email,$senha){
-
-	if(ver_user_exis()){
-		$stmt = $con->prepare("INSERT INTO users(name,username,email,senha) VALUES (?,?,?,?)");
+	global $conn;
+	if(ver_user_exis($username,$email)){
+		$stmt = $conn->prepare("INSERT INTO users(name,username,email,senha) VALUES (?,?,?,?)");
 		$stmt -> execute([$nome,$username,$email,$senha]);
+		//echo "SEJA BEM VINDO";
 	}
 
 
 }
 
 //função para verficar se o usuário já está cadastrado
-function ver_user_exis($username,$senha){
-
-	$stmt = $con->prepare("SELECT * FROM user WHERE username =? OR email=? ");
+function ver_user_exis($username,$email){
+	global $conn;
+	$stmt = $conn->prepare("SELECT * FROM users WHERE username =? OR email=? ");
 	$stmt -> execute([$username,$email]);
+
+	 
 
 	if($stmt -> rowCount()>0){
 		return false;
+		
 	}else{
 		return true;
+		echo "oi";
 	}
 
 } 
 
-header("location:register.php");
+cadastro_de_user($nome,$username,$email,$senha);
 
 
 ?>
