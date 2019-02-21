@@ -46,7 +46,7 @@ create table reservas_equips (
     foreign key (equip_id) references equips (id) on delete cascade
 );
 
-create user 'pep2' identified by 'pep2';
+create user if not exists 'pep2' identified by 'pep2';
 grant all privileges on pep2_reservas.* to pep2;
 
 -- dados de teste
