@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form action="cadastro.php" method="POST">
+<form action="register.php" method="POST">
 	<input type="text" title="nome" name="nome">
 	<input type="text" title="Nome de usuario" name="username">
 	<input type="text" title="E-mail" name="email">
