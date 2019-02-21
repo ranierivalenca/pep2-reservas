@@ -39,8 +39,16 @@ create table reservas (
 );
 
 create table reservas_equips (
-    reserva_id  int primary key,
-    equip_id    int primary key,
-    foreign key (reserva_id) references reservas (id),
-    foreign key (equip_id) references equips (id)
+    reserva_id  int,
+    equip_id    int,
+    foreign key (reserva_id) references reservas (id) on delete cascade,
+    foreign key (equip_id) references equips (id) on delete cascade
 );
+
+create user 'pep2' identified by 'pep2';
+grant all privileges on pep2_reservas.* to pep2;
+
+-- dados de teste
+
+insert into users (name, username, email, senha, is_admin) values
+    ('Admin', 'admin', 'ranieri.carvalho@igarassu.ifpe.edu.br', md5('admin'), true)
