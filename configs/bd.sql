@@ -1,3 +1,4 @@
+drop database if exists pep2_reservas;
 create database pep2_reservas;
 use pep2_reservas;
 
