@@ -3,6 +3,7 @@
 global $conn;
 
 function conect($user, $senha){	
+	session_start();
 	try {
 		$conn = new PDO('mysql:host=localhost;dbname=pep2_reservas', $user, $senha);
 		
@@ -10,9 +11,7 @@ function conect($user, $senha){
 		echo "Error :". $e->getMessage();
 	}
 }
-
-function edit_reservas(){
-
+function queryEquips(){
+$query= $conn->prepare("SELECT * FROM equips WHERE")
 }
-
 ?>
