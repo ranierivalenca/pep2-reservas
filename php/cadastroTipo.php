@@ -3,8 +3,6 @@ session_start();
 
 include 'conexao.php';
 
-//$u= new users;
-//$u->conexao();
 
 $u = new Conexao();
 
