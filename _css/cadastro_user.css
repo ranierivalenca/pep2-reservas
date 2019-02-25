@@ -1,0 +1,22 @@
+#fieldform{
+	margin: 0 auto;
+	width: 50vw;
+	height: 50vh;
+}
+#formfield{
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+#formfield input,label{
+	width: 50%;
+	height: 20px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-radius: 20px;
+}
+#formfield input[type=submit]{
+	margin-top: 50px;
+	width: 25%;
+	height: 25px;
+}
