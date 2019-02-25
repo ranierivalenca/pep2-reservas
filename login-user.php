@@ -15,17 +15,17 @@
 	}
 </style>
 <body>
-	<h1> Login </h1>
-	<p> Tela de Login do usuário </p>
+	<h1> Autenticação </h1>
+	<p> Tela de Autenticação do usuário </p>
 <hr>
 	<fieldset>
-		<legend> Login </legend>
+		<legend> Autenticação </legend>
 			<div id="login" align="center">
 			<form action="action_login.php" method="post">
 				<label>Nome do usuario</label></br>
-				<input type="text" name="login"> <br><br>
+				<input type="text" name="login" required=""> <br><br>
 				<label>Senha</label></br>
-				<input type="password" name="senha"><br><br>
+				<input type="password" name="senha" required=""><br><br>
 				<input type="submit" name="enviar" value="Enviar">
 			</form>
 		</div>
