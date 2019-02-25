@@ -33,8 +33,8 @@ create table reservas (
     id          int primary key auto_increment,
     user_id     int,
     sala_id     int,
-    hora_ini    timestamp,
-    hora_fim    timestamp,
+    hora_ini    timestamp null,
+    hora_fim    timestamp null,
     foreign key (user_id) references users (id),
     foreign key (sala_id) references salas (id)
 );
