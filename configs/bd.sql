@@ -25,7 +25,6 @@ create table equip_types (
 create table equips (
     id          int primary key auto_increment,
     nome        varchar(50),
-    quantidade int,
     type_id     int,
     foreign key (type_id) references equip_types (id)
 );
@@ -54,4 +53,17 @@ grant all privileges on pep2_reservas.* to "pep2";
 -- dados de teste
 
 insert into users (name, username, email, senha, is_admin) values
-    ('Admin', 'admin', 'ranieri.carvalho@igarassu.ifpe.edu.br', md5('admin'), true)
+    ('Admin', 'admin', 'ranieri.carvalho@igarassu.ifpe.edu.br', md5('admin'), true);
+insert into users (name, username, email, senha, is_admin) values
+    ('floki', 'floki', 'floki@gmail.com', md5('123'), true);
+insert into salas (nome, bloco) values 
+    ('Auditório', 'A');
+insert into equip_types (tipo) values 
+    ("Audiovisual");
+insert into equips (nome, type_id)  values 
+    ("Projetor", 1);
+insert into reservas (user_id, sala_id, hora_ini, hora_fim) values 
+    (2, 1, null, null);    
+insert into reservas_equips (reserva_id, equip_id) values
+    (1, 1);
+
