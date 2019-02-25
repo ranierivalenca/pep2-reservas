@@ -3,14 +3,16 @@ session_start();
 
 include 'conexao.php';
 
-$u= new users;
-$u->conexao();
-//$nameUser = $_SESSION[''];
+//$u= new users;
+//$u->conexao();
+
+$u = new Conexao();
 
 
-$_comp=$conn->prepare('SELECT id,tipo FROM equip_types');
+$_comp=$u->conn->prepare('SELECT id,tipo FROM equip_types');
 $_comp->execute();
 $show=$_comp->fetchALL(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html>
