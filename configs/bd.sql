@@ -25,6 +25,7 @@ create table equip_types (
 create table equips (
     id          int primary key auto_increment,
     nome        varchar(50),
+    quantidade int,
     type_id     int,
     foreign key (type_id) references equip_types (id)
 );
