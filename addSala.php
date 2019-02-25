@@ -1,5 +1,5 @@
 <?php 
-include 'conexao.php';
+include 'configs/init.php';
 $nome=$_POST['nome'];
 $bloco=$_POST['bloco'];
 
