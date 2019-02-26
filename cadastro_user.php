@@ -34,10 +34,26 @@
 				type: 'POST',
 				data: $(this).serialize(),
 				success: function(res){
-					$('#formfield').reset();
+					$('#formfield').trigger('reset');
+					alert('Cadastro realizado com sucesso');
 				}
 			})
 			
+		});
+		$('#confirma').on('change', function(event) {
+			event.preventDefault();
+			if ($(this).val() != $('#senha').val()) {
+				$(this).css({
+					color: 'red',
+				});
+				$('input[type=submit]').attr('disabled', 'true');
+			}
+			if ($(this).val() == $('#senha').val()) {
+				$('input[type=submit]').removeAttr('disabled');
+				$(this).css({
+					color: 'black',
+				});
+			}
 		});
 	</script>
 </body>
