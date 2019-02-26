@@ -11,7 +11,10 @@
 	
 	<form id="busca">
 		<h3>Buscar salas por horário</h3>
-		<hr>
+		<hr><br>
+		<label>
+			Dia: <input type="date" name="dia" required>
+		</label><br><br>
 		<label>
 			Início: <input type="time" name="inicio" required>
 		</label><br><br>
@@ -32,12 +35,14 @@
 	$("#busca").on('submit', function(e){
 		e.preventDefault();
 
-		var inicio = $("input[name='inicio']").val();
-		var termino = $("input[name='termino']").val();
+		var dia = $("#busca input[name='dia']").val();
+		var inicio = $("#busca input[name='inicio']").val();
+		var termino = $("#busca input[name='termino']").val();
 
 		$.ajax({
 			url:'consultar-salas.php',
 			type:'POST',
+			data:{dia:dia, inicio:inicio, termino:termino},
 			success: function(data){
 				$("#list-salas").html(data);
 			}
