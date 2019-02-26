@@ -47,8 +47,8 @@ create table reservas_equips (
 );
 
 drop user if exists 'pep2';
-create user if not exists 'pep2' identified with mysql_native_password by 'pep2';
-grant all privileges on pep2_reservas.* to pep2;
+create user if not exists "pep2" identified with mysql_native_password by "pep2";
+grant all privileges on pep2_reservas.* to "pep2";
 
 -- dados de teste
 
