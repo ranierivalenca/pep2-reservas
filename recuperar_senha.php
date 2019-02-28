@@ -33,9 +33,9 @@ $_SESSION['user_name'] = "admin";
 </head>
 <body>
 	<div class="container">
-		<div class="pos" align="center" onclick="valSenha()">
+		<div class="pos" align="center" >
 			<h1>Mudar Senha</h1>
-			<form action="recSenha.php" method="POST" id="form-senha">
+			<form action="recSenha.php" onclick="valSenha()" method="POST" id="form-senha">
 				<h3>Digite sua senha atual:</h3>
 				<input type="password" name="senha_atual" placeholder="senha">
 				<br>
@@ -53,13 +53,31 @@ $_SESSION['user_name'] = "admin";
 	function valSenha(){
 		var n1 = document.getElementById('n1').value;
 		var n2 = document.getElementById('n2').value;
+		$("#form-senha").on("submit", function(e){
+			e.preventDefault();
 
-		if (n1 != n2) {
-			$("#form-senha").on("submit", function(e){
-				e.preventDefault();
-			});
-			console.log("SENHAS")
-		} 
+			if (n1 != n2) {
+				alert("As senhas devem ser iguais");
+			} else {
+				$.ajax({
+					type: "POST",
+					datatype: 'json',
+					url: $(this).attr('action'),
+					data: $(this).serialize(),
+					success: function(row){
+						row = JSON.parse(row);
+
+						if (row.status == "ok") {
+							alert("Senha alterada com secesso");
+						} else {
+							alert("Senha incorreta");
+						}
+
+					}
+				});	
+
+			}
+		});
 	}
 
 	valSenha();

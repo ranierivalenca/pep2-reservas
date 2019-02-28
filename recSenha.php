@@ -13,12 +13,20 @@ $querySenha->execute();
 
 $dataSenha = $querySenha->fetchALL(PDO::FETCH_ASSOC);
 
+$resposta = [ 'status' => ""];
+
 if (sizeof($dataSenha) > 0) {
 	$queryUp_senha = $conn->prepare("UPDATE users SET senha = :senha WHERE username = :user_name");
 	$queryUp_senha->bindParam(":senha", $senha_nova);
 	$queryUp_senha->bindParam(":user_name", $_SESSION['user_name']);
 	$queryUp_senha->execute();
 
-	header('location: recuperar_senha.php');
+	$resposta['status'] = "ok";
+
+} else {
+	$resposta['status'] = "erro-senha";
 }
+
+echo json_encode($resposta);
+ 
  ?>
