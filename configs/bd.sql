@@ -1,5 +1,5 @@
 drop database if exists pep2_reservas;
-create database pep2_reservas;
+create database pep2_reservas default character set utf8 default collate utf8_general_ci;
 use pep2_reservas;
 
 create table users (
@@ -58,6 +58,10 @@ insert into users (name, username, email, senha, is_admin) values
     ('floki', 'floki', 'floki@gmail.com', md5('123'), true);
 insert into salas (nome, bloco) values 
     ('Auditório', 'A');
+insert into salas (nome, bloco) values 
+    ('Sala', 'B');
+insert into salas (nome, bloco) values 
+    ('Sala2', 'B');
 insert into equip_types (tipo) values 
     ("Audiovisual");
 insert into equips (nome, type_id)  values 
