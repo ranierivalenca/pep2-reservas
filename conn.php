@@ -12,7 +12,7 @@ include 'configs/init.php';
 		if($stmt->rowCount()>0){
 			$_SESSION['login'] = $_POST['login']; 
 			
-			header('Location: /php/cadastro.php');
+			header('Location: /php/index.php');
 			
 		}else{
 			$_SESSION['logErro']=true;
