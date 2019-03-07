@@ -15,3 +15,7 @@ conf-git-ranieri:
 conf-git-lib:
 	git config user.email "libnarodrigues723@gmail.com"
 	git config user.name "libna"
+
+conf-git-Sony:
+	git config user.name "erickson"
+	git config user.email "erickson.ferreira@outlook.com.br"
