@@ -1,3 +1,4 @@
+
 conf-git-silvio:
 	@git config user.name "Silvio"
 	@git config user.email "silvioej@gmail.com"
@@ -25,12 +26,9 @@ conf-git-cleyton:
 	git config user.email "cleytonv104@gmail.com"
 	git config user.name "CleytonVieira"
 
-
-
-
-
-
-
+conf-git-adriene:
+	git config user.email "adrienebarbosa22@gmail.com"
+	git config user.name "Adriene"
 
 conf-git-ricardo:
 	git config --global user.name "cranioscaner"
@@ -43,10 +41,6 @@ config-git-naadabe:
 config-git-geovane:
 	git config --global user.name "geovanejose"
 	git config --global user.email "geovanejose240899@gmail.com"
-
-config-git-Adriene:
-	git config --global user.name "Adrieneinteligente"
-	git config --global user.email "adrienebarbosa22@gmail.com"
 	
 conf-git-rebeca:
 	git config user.name "Rebeca"
