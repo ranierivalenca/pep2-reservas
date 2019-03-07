@@ -20,6 +20,7 @@ conf-git-Sony:
 	git config user.name "erickson"
 	git config user.email "erickson.ferreira@outlook.com.br"
 
+
 conf-git-cleyton:
 	git config user.email "cleytonv104@gmail.com"
 	git config user.name "CleytonVieira"
@@ -46,6 +47,8 @@ config-git-geovane:
 config-git-Adriene:
 	git config --global user.name "Adrieneinteligente"
 	git config --global user.email "adrienebarbosa22@gmail.com"
->>>>>>> adicionando os gits do grupo Naadabe,Ricardo,Adriene e Geovane.
-
+	
+conf-git-rebeca:
+	git config user.name "Rebeca"
+	git config user.email "rebecacristina535@gmail.com"
 
