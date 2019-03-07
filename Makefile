@@ -1,3 +1,4 @@
+
 conf-git-silvio:
 	git config user.name "Silvio"
 	git config user.email "silvioej@gmail.com"
@@ -10,3 +11,7 @@ commit-all:
 conf-git-ranieri:
 	@git config user.name "Ranieri"
 	@git config user.email "ranierivalenca@gmail.com"
+
+conf-git-lib:
+	git config user.email "libnarodrigues723@gmail.com"
+	git config user.name "libna"
