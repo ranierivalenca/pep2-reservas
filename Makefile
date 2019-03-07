@@ -52,3 +52,7 @@ conf-git-rebeca:
 	git config user.name "Rebeca"
 	git config user.email "rebecacristina535@gmail.com"
 
+conf-git-wolaci:
+	git config user.name "Wolaci"
+	git config user.email "wolacijose8@gmail.com"
+
